@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* General styles for headings */
+  h1, h2, h3, h4, h5, h6 {
+    color: #0056b3; /* A nice blue color for headings */
+  }
+

@@ -1,6 +1,6 @@
 // src/app/firebase.service.ts
 import { Injectable } from '@angular/core';
-import { Firestore, collection, getDocs, getFirestore } from '@angular/fire/firestore';
+import { Firestore, collection, getDocs, getFirestore, addDoc } from '@angular/fire/firestore';
 import { initializeApp } from 'firebase/app';
 import { Observable, from } from 'rxjs';
 import { environment } from '../../environments/environment.development';
@@ -26,4 +26,11 @@ export class FirebaseService {
       )
     );
   }
+
+  async addProject(projectData: any): Promise<any> {
+    const projectsCollection = collection(this.firestoreDb, 'projects');
+    return addDoc(projectsCollection, projectData);
+  }
+
+
 }

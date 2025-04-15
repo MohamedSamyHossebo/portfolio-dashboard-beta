@@ -1,13 +1,14 @@
-import { Component, inject, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component, inject, OnInit, Type } from '@angular/core';
 import { FirebaseService } from '../../services/firebase.service';
 import { CommonModule } from '@angular/common';
+import { AddProjectComponent } from '../add-project/add-project.component';
 
 @Component({
+  standalone: true,
   selector: 'app-home',
-  imports: [CommonModule],
+  imports: [CommonModule,AddProjectComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
 export class HomeComponent implements OnInit {
   firebaseService = inject(FirebaseService);
@@ -16,16 +17,10 @@ export class HomeComponent implements OnInit {
     this.displayData();
   }
 
-  displayData(): any {
-    //   const dataObservable = this.firebaseService.getData();
-    //   dataObservable.subscribe((data) => {
-    //     this.projects = data;
-    //     console.log("Data fetched from Firebase ==>", data);
-    //   });
-    // }
+  displayData(): void {
     this.firebaseService.getData().subscribe((data) => {
       this.projects = data;
-      console.log("Data fetched from Firebase ==>", data);
+      console.log('Data fetched from Firebase ==>', data);
     });
   }
 }
