@@ -1,0 +1,89 @@
+/* Project container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Responsive grid with minimum 320px width */
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+/* Individual project card */
+.project-card {
+  background-color: #f8f9fa; /* Light background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Project image */
+.project-image {
+  width: 100%;
+  height: 220px; /* Fixed height for images */
+  object-fit: cover;
+}
+
+/* Project card content */
+.project-content {
+  padding: 15px;
+  flex: 1; /* Let the content take up available space */
+}
+
+/* Project name */
+.project-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Project description */
+.project-description {
+  color: #555;
+  margin: 10px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.project-link {
+  background-color: #007bff; /* Primary color for links */
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
+}
+.project-content a {text-decoration: none;}
+
+.project-link:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Add project link */
+.add-project-link {
+    background-color: #28a745; /* Green for "add" */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px; /* More rounded corners */
+    margin: 20px auto;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+    display: block;
+    text-align: center;
+    width: fit-content;
+    font-weight: 500; /* Slightly bolder font */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none; /* Subtle shadow */
+}
+.add-project-link:hover {
+  background-color: #218838; /* Darker shade on hover */
+}

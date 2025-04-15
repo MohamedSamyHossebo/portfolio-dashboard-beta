@@ -1,0 +1,21 @@
+<form class="add-project-form" [formGroup]="projectForm" (ngSubmit)="addProject()">
+  <div class="form-group">
+    <label class="form-label" for="name">Project Name:</label>
+    <input class="form-input" type="text" id="name" formControlName="project_Name" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="description">Project Description:</label>
+    <textarea class="form-input" id="description" formControlName="project_details" required></textarea>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="image">Project Image URL:</label>
+    <input class="form-input" type="url" id="image" formControlName="image" required>
+  </div>
+  <div class="form-group">
+    <label class="form-label" for="projectLink">Project Link:</label>
+    <input class="form-input" type="url" id="projectLink" formControlName="projectLink" required>
+  </div>
+  <div class="form-group">
+    <button class="form-button" type="submit">Add Project</button>
+  </div>
+</form>

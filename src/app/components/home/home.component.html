@@ -1,13 +1,15 @@
-@for (item of projects; track $index) {
-<p>{{ item.project_Name}}</p>
-<p>{{ item.project_Id}}</p>
-<p>{{ item.project_details}}</p>
+<div class="home-container">
+<app-add-project></app-add-project>
+  <div class="projects-grid">
+    @for (project of projects; track project.id) {
+    <div class="project-card">
+      <div class="project-details">
+        <h3 class="project-name">{{ project.project_Name }}</h3>
+        <p class="project-description">{{ project.project_details }}</p>
+        <p class="project-description">{{ project.projectLink}}</p>
 
-}
-
-
-
-<!-- عرض رسالة انتظار في حال كان البيانات قيد التحميل -->
-<ng-template #loading>
-    <p>Loading...</p>
-</ng-template>
+      </div>
+    </div>
+    }
+  </div>
+</div>
