@@ -1,21 +1,19 @@
-<form class="add-project-form" [formGroup]="projectForm" (ngSubmit)="addProject()">
-  <div class="form-group">
-    <label class="form-label" for="name">Project Name:</label>
-    <input class="form-input" type="text" id="name" formControlName="project_Name" required>
+<form class="container border" [formGroup]="projectForm" (ngSubmit)="addProject()">
+  <div class="mb-3">
+    <label for="name" class="form-label">Project Name:</label>
+    <input type="text" class="form-control" id="name" formControlName="project_Name" required>
   </div>
-  <div class="form-group">
-    <label class="form-label" for="description">Project Description:</label>
-    <textarea class="form-input" id="description" formControlName="project_details" required></textarea>
+  <div class="mb-3">
+    <label for="description" class="form-label">Project Description:</label>
+    <textarea class="form-control" id="description" formControlName="project_details" required></textarea>
   </div>
-  <div class="form-group">
-    <label class="form-label" for="image">Project Image URL:</label>
-    <input class="form-input" type="url" id="image" formControlName="image" required>
+  <div class="mb-3">
+    <label for="image" class="form-label">Project Image URL:</label>
+    <input type="url" class="form-control" id="image" formControlName="image" required>
   </div>
-  <div class="form-group">
-    <label class="form-label" for="projectLink">Project Link:</label>
-    <input class="form-input" type="url" id="projectLink" formControlName="projectLink" required>
+  <div class="mb-3">
+    <label for="projectLink" class="form-label">Project Link:</label>
+    <input type="url" class="form-control" id="projectLink" formControlName="projectLink" required>
   </div>
-  <div class="form-group">
-    <button class="form-button" type="submit">Add Project</button>
-  </div>
+  <button type="submit" class="btn btn-primary mb-3">Add Project</button>
 </form>
